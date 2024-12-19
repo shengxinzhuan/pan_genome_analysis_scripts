@@ -72,4 +72,22 @@ The fourth script will count the number of pan and core gene families obtained f
 'Core' refers to gene families that are present in all paired species, while 'pan' refers to gene families that are not shared by all.
 ```
 python 04_boxplot_pan_core.py orthogroups.pav.tsv
+
+outputfile:
+A_B_pan:3345
+A_B_core: 1234
+A_C_pan:6543
+A_C_core: 1346
+......
+A_B_C_D_E_F_pan: 34567
+A_B_C_D_E_F_core: 2678
 ```
+![boxplot_demo](https://github.com/shengxinzhuan/pan_genome_analysis_scripts/blob/main/box_plot_pan_core.png) <br>
+
+The fifth script serves a similar purpose to the fourth one, but its function is to count the specific quantities.<br>
+Therefore, it is designed to work with the pan.tsv file produced by the first script.
+```
+python 05_box_plot_pan_core.gene_num.py orthogroups.pan.tsv
+```
+![boxplot_demo](https://github.com/shengxinzhuan/pan_genome_analysis_scripts/blob/main/boxplot_pan_core.gene_num.png)
+
