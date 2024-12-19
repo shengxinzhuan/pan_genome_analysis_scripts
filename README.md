@@ -60,8 +60,16 @@ OG0006853       1       1       1       1       1       1       1       1       
 OG0006835       1       1       1       1       1       1       1       1       core
 ```
 The third script's purpose is to convert the TSV file obtained from the second script into a heatmap, which is commonly referred to as PAV in articles. Red represents presence, while blue indicates absence.<br>
+By the way, it will also generate a pieplot for statistic result of gene family 
 The sorting is done in the order of core-private.
 ```
 python 03_heatmap_pan_core.py orthogroups.pav.tsv
 ```
-![heatmap_demo]()
+![heatmap_demo](https://github.com/shengxinzhuan/pan_genome_analysis_scripts/blob/main/1734604774771.jpg)<br>
+![piplot_demo](https://github.com/shengxinzhuan/pan_genome_analysis_scripts/blob/main/pieplot_pan_core.png)<br>
+
+The fourth script will count the number of pan and core gene families obtained from each combination, ranging from pairwise to all-species pairings.<br>
+'Core' refers to gene families that are present in all paired species, while 'pan' refers to gene families that are not shared by all.
+```
+python 04_boxplot_pan_core.py orthogroups.pav.tsv
+```
