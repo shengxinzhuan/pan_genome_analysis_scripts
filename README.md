@@ -59,3 +59,9 @@ OG0006854       1       1       1       1       1       1       1       1       
 OG0006853       1       1       1       1       1       1       1       1       core
 OG0006835       1       1       1       1       1       1       1       1       core
 ```
+The third script's purpose is to convert the TSV file obtained from the second script into a heatmap, which is commonly referred to as PAV in articles. Red represents presence, while blue indicates absence.<br>
+The sorting is done in the order of core-private.
+```
+python 03_heatmap_pan_core.py orthogroups.pav.tsv
+```
+![heatmap_demo]()
