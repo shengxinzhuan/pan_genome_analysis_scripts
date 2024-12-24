@@ -20,7 +20,7 @@ def convert_data(input_file_path):
                     converted_parts.append('1')
                 elif part in ['0/0', '0|0']:
                     converted_parts.append('0')
-                elif part in ['0/1', '0|1', '1|0']:
+                elif part in ['0/1', '0|1', '1|0','1/0']:
                     converted_parts.append('0.5')
                 else:
                     
