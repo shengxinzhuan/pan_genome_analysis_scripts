@@ -176,3 +176,12 @@ If there are two or more substitution patterns, they will be separated by a comm
 ```
 python 05_filter_biallelic.py input.vcf > output.biallelic.vcf
 ```
+## 06. Variants classify (only for biallelic)
+This script is designed to classify SNPs, indels, and SVs, generating three separate child VCF files.<br>
+Its operation is as follows: after input, it automatically saves the header file, then it judges the length of REF and ALT. <br>
+If both REF and ALT have a length of 1, it is classified as a SNP. <br>
+If one of them has a length greater than 2 and less than 50, it is judged as an INDEL.<br>
+If one of them has a length of 50 or more, it is classified as an SV.
+```
+python 06_variants_bypass.py input.vcf --snp output.snps.vcf --indel output.indel.vcf --sv output.sv.vcf
+```
