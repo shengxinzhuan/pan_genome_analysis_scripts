@@ -185,3 +185,9 @@ If one of them has a length of 50 or more, it is classified as an SV.
 ```
 python 06_variants_bypass.py input.vcf --snp output.snps.vcf --indel output.indel.vcf --sv output.sv.vcf
 ```
+## 07. PCA analysis for PAV matrix
+This script will perform clustering analysis on the pav.tsv table and return a sorted result based on PCA clustering, a PCA clustering plot, and a PCA clustering outcome. <br>
+The specific rules are as follows: This script will use the PCA module from sklearn for dimensionality reduction, followed by clustering with KMeans (defaulting to 2 cluster centers), and then use the obtained results for sorting and plotting.
+```
+python 07_cluster_pav.py input.pav.tsv sort.pav.tsv pca.cluster.eval pca_plot.png/pdf
+```
