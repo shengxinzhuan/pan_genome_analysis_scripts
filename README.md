@@ -168,3 +168,11 @@ chrN_3  1  -1  -1  -1  1  pan
 chrN_4  1  -1  -1  -1  -1  private
 chrN_5  -1  -1  -1  -1  -1  loss
 ```
+## 05. Retain biallelic loci
+This script can be used to filter SNPs, InDels, and SVs, retaining only biallelic loci.<br>
+The filtering rules are as follows: In a standard VCF file, the ALT field contains information about the substitutions;<br> 
+if it is a biallelic locus, there will be only one type of substitution pattern.<br>
+If there are two or more substitution patterns, they will be separated by a comma “,”. This script uses this comma to determine whether a locus is biallelic.
+```
+python 05_filter_biallelic.py input.vcf > output.biallelic.vcf
+```
