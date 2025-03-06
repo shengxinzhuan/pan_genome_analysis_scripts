@@ -62,3 +62,7 @@ XX01AG000003.mRNA1      7       7       2277    30.0604 1.0000
 XX01AG000004.mRNA1      7       7       1479    32.6165 1.0000
 XX01AG000005.mRNA1      2       2       321     26.1198 1.0000
 ```
+After obtaining the table, we can filter the genes with high cds completeness to get the target gene sequence names for subsequent analysis<br>
+```
+awk '{if ($5 >= 0.7) print $1}' mRNA_summary.tsv > mRNA_summary.high_reliability.gene.list
+```
